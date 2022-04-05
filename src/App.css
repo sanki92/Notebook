@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h5,h3{font-weight: bold !important;text-transform: uppercase;}
+.nav-item{
+    margin: 0 2em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container{
+    /* background-color: rgba(255, 99, 71, 0.494); */
+}
+.nav-item a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .nav-item a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-item a:hover:after { 
+    width: 100%; 
+    left: 0; 
   }
-}
+  .active::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+  }
+ 
+
+  .card{
+    border-radius: 10px;
+    transition: all 1s;
+    background-color: transparent;
+    outline: 6px double rgb(0, 0, 0);
+  }
+  
+  .card:hover{
+    transform: scale(1.05);
+  }
